@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayam Penyet Sambel Ijo - Uduk Ipin Istimewa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slide active" id="slide1">
+            <div class="hero-content">
+                <img src="logo.jpg" alt="Logo Ayam Penyet Sambel Ijo" class="logo" loading="lazy">
+                <h1 class="hero-title">Ayam Penyet</h1>
+                <h2 class="hero-subtitle">Sambel Ijo</h2>
+                <p class="tagline">Uduk Ipin Istimewa</p>
+                <p class="owner"><strong>Oleh Ipin Taslipin</strong></p>
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <h1 class="slide-title"><strong>MENU</strong></h1>
+            <div class="menu-grid">
+                <div class="menu-item" data-name="Ayam Penyet Sambel Ijo" data-price="13000">
+                    <img src="ayam penyet.jpg" alt="Ayam Penyet Sambel Ijo" loading="lazy">
+                    <h3>Ayam Penyet Sambel Ijo</h3>
+                    <p>Rp. 13.000</p>
+                </div>
+                <div class="menu-item" data-name="Ayam Penyet + Nasi" data-price="15000">
+                    <img src="paket.jpg" alt="Ayam Penyet + Nasi" loading="lazy">
+                    <h3>Ayam Penyet sambel ijo + Nasi</h3>
+                    <p>Rp. 15.000</p>
+                </div>
+                <div class="menu-item" data-name="Tahu" data-price="2000">
+                    <img src="tahu.jpg" alt="Tahu" loading="lazy">
+                    <h3>Tahu</h3>
+                    <p>Rp. 2.000/pcs</p>
+                </div>
+                <div class="menu-item" data-name="Tempe" data-price="2000">
+                    <img src="tempe.jpg" alt="Tempe" loading="lazy">
+                    <h3>Tempe</h3>
+                    <p>Rp. 2.000/pcs</p>
+                </div>
+                <div class="menu-item" data-name="Es Teh Manis" data-price="4000">
+                    <img src="esteh.jpg" alt="Es Teh Manis" loading="lazy">
+                    <h3>Es Teh Manis</h3>
+                    <p>Rp. 4.000</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <h1 class="slide-title">Tentang</h1>
+            <p class="about-text">Uduk Ipin Istimewa - Warung Ayam Penyet terbaik dengan sambel ijo pedas menggigit! Dibuat dengan cinta oleh Ipin.</p>
+            <p class="owner"><strong>Owner : Ipin Taslipin</strong></p>
+        </div>
+        <div class="slide" id="slide4">
+            <h1 class="cta-title"><strong>Pesan Sekarang!</strong></h1>
+            <a href="https://wa.me/6282213802266?text=Saya%20ingin%20pesan%20Ayam%20Penyet" class="order-btn" rel="noopener noreferrer" target="_blank">Order via WA</a>
+            <p class="invitation-text">Datanglah ke warung kami!</p>
+            <p class="address-text">Jalan Perbanas, depan gedung Perbanas unit 3, samping fotokopi</p>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <button class="nav-btn prev">Kembali</button>
+    <button class="nav-btn next">Lanjut</button>
+    <button class="cart-btn" id="cartBtn" aria-label="Lihat keranjang belanja">🛒 <span id="cartCount">0</span></button>
+
+    <!-- Modal Order -->
+    <div id="orderModal" class="modal" role="dialog" aria-labelledby="orderModalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="close" id="closeOrder" aria-label="Tutup modal">&times;</span>
+            <h2 id="orderModalTitle">Pesan Menu</h2>
+            <div id="orderDetails"></div>
+            <div class="order-form">
+                <label>Jumlah:</label>
+                <div class="qty-control">
+                    <button id="qtyMinus">-</button>
+                    <input type="number" id="qtyInput" value="1" min="1">
+                    <button id="qtyPlus">+</button>
+                </div>
+                <button id="addToCartBtn" class="order-confirm-btn">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Invoice -->
+    <div id="invoiceModal" class="modal" role="dialog" aria-labelledby="invoiceModalTitle" aria-modal="true">
+        <div class="modal-content invoice-modal">
+            <span class="close" id="closeInvoice" aria-label="Tutup invoice">&times;</span>
+            <h2 id="invoiceModalTitle">📋 Invoice Pesanan</h2>
+            <div id="invoiceContent">
+                <p style="text-align: center; color: #999;" class="empty-cart-text">Keranjang kosong</p>
+            </div>
+            <div class="invoice-footer">
+                <button id="clearCartBtn" class="btn-danger">Hapus Semua</button>
+                <button id="sendWABtn" class="btn-success">Kirim via WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
